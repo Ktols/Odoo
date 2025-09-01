@@ -1,0 +1,25 @@
+<odoo>
+    <!-- acción para abrir la lista/form del modelo -->
+    <record id="action_demo_insecure" model="ir.actions.act_window">
+        <field name="name">Demo Insecure</field>
+        <field name="res_model">demo.insecure</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- acción que abre la URL del controlador (formulario estilo web) -->
+    <record id="action_demo_insecure_standalone" model="ir.actions.act_url">
+        <field name="name">Demo Standalone Form</field>
+        <field name="type">ir.actions.act_url</field>
+        <field name="url">/demo_insecure/standalone</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- menú raíz del módulo -->
+    <menuitem id="menu_demo_insecure_root" name="Demo Insecure" sequence="10"/>
+
+    <!-- submenú para acceder a la lista normal del modelo -->
+    <menuitem id="menu_demo_insecure_list" name="Registros" parent="menu_demo_insecure_root" action="action_demo_insecure" sequence="10"/>
+
+    <!-- submenú que abre la página del controlador (estilo web) -->
+    <menuitem id="menu_demo_insecure_standalone" name="Standalone Form" parent="menu_demo_insecure_root" action="action_demo_insecure_standalone" sequence="30"/>
+</odoo>

@@ -19,7 +19,6 @@ __pycache__/
 *.gz
 venv/
 odoo-db-data/
-addons/
 # setup.py egg_info
 *.egg-info
 # emacs backup files
